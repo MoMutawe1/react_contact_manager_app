@@ -1,7 +1,7 @@
 import React from "react";
 import user from "../images/user.png";
 
-export default function ContactCard(props) {
+const ContactCard = (props) => {
 
     const { id, name, email} = props.contact;
     return (
@@ -19,4 +19,6 @@ export default function ContactCard(props) {
                 ></i>
             </div>
     );
-}
+};
+
+export default ContactCard;

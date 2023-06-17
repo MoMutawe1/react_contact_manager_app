@@ -1,7 +1,5 @@
 import React from "react";
 
-
-//export default function AddContact() {
 class AddContact extends React.Component {
 
     state = {
@@ -17,6 +15,9 @@ class AddContact extends React.Component {
         }
         this.props.addContactHandler(this.state);
         this.setState({ name: "", email: "" });
+        console.log("..Add props.. "+this.props);
+        //this.props.history.push("/");
+        this.props.history.push("/");
     };
 
   render() {
@@ -49,5 +50,3 @@ class AddContact extends React.Component {
     }
 }
 export default AddContact;
-
- 

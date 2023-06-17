@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ContactCard from "./ContactCard";
 
-export default function 
+const ContactList = (props) => {
 
-ContactList(props){
     console.log(props);
 
     const deleteConactHandler = (id) => {
@@ -19,5 +19,18 @@ ContactList(props){
       />
     );
   });
-  return <div className="ui celled list">{renderContactList}</div>;
+
+  return (
+    <div className="main">
+      <h2 className="main">
+        Contact List
+        <Link to="/add">
+            <button className="ui button blue right goRight">Add Contact</button>
+        </Link>
+      </h2>
+      <div className="ui celled list">{renderContactList}</div>
+    </div>
+  );
 };
+
+export default ContactList;
